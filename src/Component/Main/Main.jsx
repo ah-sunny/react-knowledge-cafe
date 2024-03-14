@@ -11,10 +11,12 @@ const Main = () => {
         const newBookmarks = [...Bookmarks, blog]
         setBookmarks(newBookmarks)
     }
-    const handletime = (time) => {
+    const handletime = (time,id) => {
         const newTime = readingTime + time;
         setReadingTime(newTime);
-        console.log('time :',time)
+        //console.log('time :',time,id)
+        const remaningReadBookmarks = Bookmarks.filter(blog=>blog.id !== id);
+        setBookmarks(remaningReadBookmarks)
     }
 
     return (

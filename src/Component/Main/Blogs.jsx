@@ -17,11 +17,11 @@ const Blogs = ({ handleBookmark, handletime }) => {
     
             <div className="space-y-10">
                 {
-                    blogs.map(blog =>
+                    blogs.map((blogs,idx) =>
                         <ShowBlogs
-                            key={blog.id}
+                            key={idx}
                             handleBookmark={handleBookmark}
-                            blog={blog}
+                            blog={blogs}
                             handletime={handletime}>
 
                         </ShowBlogs>)
